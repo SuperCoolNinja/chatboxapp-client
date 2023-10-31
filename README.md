@@ -1,6 +1,16 @@
 # ChatBox Client-side
+A chatboxApp using NodeJS, Express, Socket.io, ReactJS, TailwindCSS with only one room.
 
-> This Chatbox has been made to learn and practice the usage of socket.io with ReactJS, You can view a list of users online in the left tab and talk in the right tab, this is only using one global room, no private room. 
+## What you can do actually ? 
+* Join the room chat by sign in your pseudo.
+* Send messages.
+* Receive messages.
+* See who connected to the chat.
+
+![Visual](https://cdn.discordapp.com/attachments/815375604610236426/1168487189454274570/image.png?ex=6551f17f&is=653f7c7f&hm=f554e77fd85df06ce9715c66112862283dc04ca2b53487031d7cee1b08760467&)
+
+You can test it here : https://chatboxapp-client.vercel.app/
+
 
 ## This project use : 
 * **socket.io-client** to synchronize in realtime the room and conversation.
