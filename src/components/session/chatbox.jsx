@@ -42,13 +42,13 @@ export const Chatbox = ({ getAllUsers }) => {
   };
 
   return (
-    <div className="w-1/2 bg-[#fff] text-[#464545b9] rounded-r-2xl p-2 h-[50rem]  shadow-xl">
+    <div className="w-full xl:w-1/2 bg-[#fff] text-[#464545b9] xl:rounded-r-2xl p-2 h-[30rem] xl:h-[50rem]  shadow-xl">
       <h3 className="font-bold text-[1.7rem] text-[#658fff]">Chat</h3>
       <div className="w-full h-[.1rem] bg-[#0000001c] rounded-full my-2"></div>
 
       <div className="flex flex-col">
         {/* Chat */}
-        <section className="h-[41rem] overflow-auto pb-10">
+        <section className="h-[21rem] xl:h-[41rem] overflow-auto pb-10">
           {messages.map((message, index) => (
             <Chat
               pseudo={message.pseudo}

@@ -28,13 +28,13 @@ export const SignIn = ({ usersData, setUsersData }) => {
         <h3 className="text-[#298ff6] font-bold text-[3rem] mt-32 lg:mt-0 text-center lg:text-start">
           ChatboxApp
         </h3>
-        <p className="text-[#303030] font-semibold">
+        <p className="text-[#303030] font-semibold text-center mx-auto w-2/3 xl:w-full xl:text-left">
           Join a public group chat with the ChatboxApp in just one click.
         </p>
       </section>
 
       {/* Form party */}
-      <section className="w-4/12">
+      <section className="xl:w-4/12">
         <form
           className="flex 
                     flex-col 

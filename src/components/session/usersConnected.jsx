@@ -1,8 +1,8 @@
 export const UsersConnected = ({ getAllUsers }) => {
   return (
-    <div className="w-3/12 bg-[#658fff] text-[#ffffff] rounded-l-2xl p-2 h-[50rem] border-r-2 border-[#0000000c] shadow-xl">
+    <div className="w-full xl:w-3/12 bg-[#658fff] text-[#ffffff] rounded-t-2xl xl:rounded-l-2xl p-2 xl:h-[50rem] border-r-2 border-[#0000000c] shadow-xl">
       <h3 className="font-bold  text-[1.7rem]">Users Connected</h3>
-      <div className="w-full h-[.1rem] bg-[#0000001c] rounded-full mb-5 my-2"></div>
+      <div className="w-full bg-[#0000001c] rounded-full mb-5 my-2"></div>
       <ul className="flex flex-col items-start justify-center gap-5">
         {getAllUsers.map((v) => {
           return (
