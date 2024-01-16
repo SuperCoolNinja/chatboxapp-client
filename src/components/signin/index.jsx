@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 import {useForm} from "react-hook-form";
 import {socket} from "../../socket";
 
-export const SignIn = ({usersData, setUsersData}) => {
+export const SignIn = () => {
   const [pseudo, setPseudo] = useState("");
 
   const onSubmit = (data) => {
