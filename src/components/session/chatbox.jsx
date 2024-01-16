@@ -1,9 +1,9 @@
-import { UserService } from "../../services/userService";
-import { socket } from "../../socket";
-import { Chat } from "../chat";
-import React, { useEffect, useState } from "react";
+import {UserService} from "../../services/userService";
+import {socket} from "../../socket";
+import {Chat} from "../chat";
+import React, {useEffect, useState} from "react";
 
-export const Chatbox = ({ getAllUsers }) => {
+export const Chatbox = ({getAllUsers}) => {
   /**
    * messages will contain a list of object :
    * client : string
@@ -19,7 +19,7 @@ export const Chatbox = ({ getAllUsers }) => {
     socket.on("send_message", (message, pseudo) => {
       const updatedMessages = [
         ...messages,
-        { pseudo, client: "target", content: message },
+        {pseudo, client: "target", content: message},
       ];
       setMessages(updatedMessages);
     });
@@ -32,7 +32,7 @@ export const Chatbox = ({ getAllUsers }) => {
     if (newMessage.trim() !== "") {
       const updatedMessages = [
         ...messages,
-        { pseudo: user_pseudo, client: "me", content: newMessage },
+        {pseudo: user_pseudo, client: "me", content: newMessage},
       ];
       setMessages(updatedMessages);
       setNewMessage("");
@@ -42,13 +42,13 @@ export const Chatbox = ({ getAllUsers }) => {
   };
 
   return (
-    <div className="w-full xl:w-1/2 bg-[#fff] text-[#464545b9] xl:rounded-r-2xl p-2 h-[30rem] xl:h-[50rem]  shadow-xl">
+    <div className="w-full xl:w-1/2 bg-[#fff] text-[#464545b9] xl:rounded-r-2xl p-2 h-[30rem] xl:h-[35rem] shadow-xl rounded">
       <h3 className="font-bold text-[1.7rem] text-[#658fff]">Chat</h3>
       <div className="w-full h-[.1rem] bg-[#0000001c] rounded-full my-2"></div>
 
-      <div className="flex flex-col">
+      <div className="flex flex-col ">
         {/* Chat */}
-        <section className="h-[21rem] xl:h-[41rem] overflow-auto pb-10">
+        <section className="h-[21rem] xl:h-[25rem] overflow-auto pb-10 ">
           {messages.map((message, index) => (
             <Chat
               pseudo={message.pseudo}

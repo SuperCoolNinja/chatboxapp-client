@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
-import { socket } from "../../socket";
+import {useEffect, useState} from "react";
+import {useForm} from "react-hook-form";
+import {socket} from "../../socket";
 
-export const SignIn = ({ usersData, setUsersData }) => {
+export const SignIn = ({usersData, setUsersData}) => {
   const [pseudo, setPseudo] = useState("");
 
   const onSubmit = (data) => {
@@ -18,7 +18,7 @@ export const SignIn = ({ usersData, setUsersData }) => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: {errors},
   } = useForm();
 
   return (
@@ -28,13 +28,13 @@ export const SignIn = ({ usersData, setUsersData }) => {
         <h3 className="text-[#298ff6] font-bold text-[3rem] mt-32 lg:mt-0 text-center lg:text-start">
           ChatboxApp
         </h3>
-        <p className="text-[#303030] font-semibold text-center mx-auto w-2/3 xl:w-full xl:text-left">
+        <p className="text-[#303030] font-semibold text-center lg:w-full mx-auto w-2/3 xl:text-left">
           Join a public group chat with the ChatboxApp in just one click.
         </p>
       </section>
 
       {/* Form party */}
-      <section className="xl:w-4/12">
+      <section className="xl:w-3/12 mx-auto">
         <form
           className="flex 
                     flex-col 
@@ -51,7 +51,7 @@ export const SignIn = ({ usersData, setUsersData }) => {
           onSubmit={handleSubmit(onSubmit)}
         >
           <input
-            {...register("pseudo", { required: true })}
+            {...register("pseudo", {required: true})}
             type="text"
             placeholder="Pseudo"
             className="border-[0.1rem] p-2 rounded w-full m-2"
