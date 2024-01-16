@@ -34,7 +34,7 @@ export const SignIn = () => {
       </section>
 
       {/* Form party */}
-      <section className="xl:w-3/12 mx-auto">
+      <section className="xl:w-3/12 ml-auto">
         <form
           className="flex 
                     flex-col 
