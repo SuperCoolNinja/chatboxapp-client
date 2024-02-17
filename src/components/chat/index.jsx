@@ -1,3 +1,5 @@
+import { useEffect, useRef } from "react";
+
 const ChatMessage = ({ pseudo, client, content }) => {
   const userStyle = {
     target: {
@@ -37,5 +39,20 @@ const ChatMessage = ({ pseudo, client, content }) => {
 };
 
 export const Chat = ({ pseudo, client, content }) => {
-  return <ChatMessage pseudo={pseudo} client={client} content={content} />;
+  const messagesEndRef = useRef(null);
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [content]); // Scroll to bottom when content changes
+
+  return (
+    <>
+      <ChatMessage pseudo={pseudo} client={client} content={content} />
+      <div ref={messagesEndRef} />
+    </>
+  );
 };

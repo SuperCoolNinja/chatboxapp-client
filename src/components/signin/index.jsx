@@ -1,6 +1,6 @@
-import {useEffect, useState} from "react";
-import {useForm} from "react-hook-form";
-import {socket} from "../../socket";
+import { useEffect, useState } from "react";
+import { useForm } from "react-hook-form";
+import { socket } from "../../socket";
 
 export const SignIn = () => {
   const [pseudo, setPseudo] = useState("");
@@ -18,13 +18,13 @@ export const SignIn = () => {
   const {
     register,
     handleSubmit,
-    formState: {errors},
+    formState: { errors },
   } = useForm();
 
   return (
     <div className="lg:container flex flex-col lg:flex-row justify-center items-center lg:mt-[20rem]">
       {/* Title project */}
-      <section className="ml-auto">
+      <section className="">
         <h3 className="text-[#298ff6] font-bold text-[3rem] mt-32 lg:mt-0 text-center lg:text-start">
           ChatboxApp
         </h3>
@@ -34,7 +34,7 @@ export const SignIn = () => {
       </section>
 
       {/* Form party */}
-      <section className="xl:w-3/12 lg:ml-auto">
+      <section className="xl:w-3/12 flex justify-center items-center">
         <form
           className="flex 
                     flex-col 
@@ -46,12 +46,13 @@ export const SignIn = () => {
                     rounded-xl
                     mt-16
                     p-4
+                    w-10/12
                     bg-[#fff]
                     "
           onSubmit={handleSubmit(onSubmit)}
         >
           <input
-            {...register("pseudo", {required: true})}
+            {...register("pseudo", { required: true })}
             type="text"
             placeholder="Pseudo"
             className="border-[0.1rem] p-2 rounded w-full m-2"
