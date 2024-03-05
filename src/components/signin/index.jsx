@@ -22,9 +22,9 @@ export const SignIn = () => {
   } = useForm();
 
   return (
-    <div className="lg:container flex flex-col lg:flex-row justify-center items-center lg:mt-[20rem]">
+    <div className="flex flex-col lg:gap-10 lg:flex-row justify-center items-center lg:mt-[20rem]">
       {/* Title project */}
-      <section className="">
+      <section>
         <h3 className="text-[#298ff6] font-bold text-[3rem] mt-32 lg:mt-0 text-center lg:text-start">
           ChatboxApp
         </h3>
